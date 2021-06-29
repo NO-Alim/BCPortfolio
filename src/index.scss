@@ -1,0 +1,49 @@
+    
+    $color-pri: #ffffff;
+    $color-pri-sec: rgba($color: #e9e9e9, $alpha: 0.8);
+    $color-bg:  rgba($color: #101c31, $alpha: 1.0);
+    $color-bg-sec:  rgba($color: #101c31, $alpha: 0.8);
+    $color-sec: rgba($color: #75efff, $alpha: 1.0);
+    $color-sec-sec: rgba($color: #75efff, $alpha: 0.3);
+    $color-border: rgba($color: #cccccc, $alpha: 0.5);
+    $color-shadow: rgba($color: #1f1f1f, $alpha: 0.9);
+
+
+    $font-base:  16px;
+
+    $padding-margin-ex-lg: 150px;
+    $padding-margin-lg: 100px;
+    $padding-margin-md: 70px;
+    $padding-margin-sm: 50px;
+    $padding-margin-ex-sm: 30px;
+
+    $transition: all 0.3s ease-in-out;
+    $extraMedium: 1100px;
+    $medium: 900px;
+    $semiMedium: 700px;
+    $small: 550px;
+    $extraSmall: 450px;
+
+
+    
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-transform: capitalize;
+    }
+
+    a{
+        text-decoration: none;
+        color: $color-pri-sec;
+    }
+
+    body{
+        width: calc(100vw - (100vw - 100%));
+        min-height: 100vh;
+        background-color: rgba($color: #101c31, $alpha: 1.0);
+        overflow-x: hidden;
+        margin: 0;
+        color: $color-pri;
+        font-size: $font-base;
+    }
