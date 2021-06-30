@@ -33,6 +33,7 @@ $extraSmall: 450px;
     zoom: 1.005;
     right: -20px;
     position: relative;
+    display: none;
     @media (max-width: $medium){
         display: none;
     }
