@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;600;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700;900&display=swap');
 
 $color-pri: #ffffff;
 $color-pri-sec: rgba($color: #e9e9e9, $alpha: 0.8);
 $color-bg:  rgba($color: #101c31, $alpha: 1.0);
 $color-bg-sec:  rgba($color: #101c31, $alpha: 0.8);
 $color-sec: rgba($color: #75efff, $alpha: 1.0);
-$color-sec-sec: rgba($color: #75efff, $alpha: 0.3);
+$color-sec-sec: rgba($color: #75efff, $alpha: 0.2);
 $color-border: rgba($color: #cccccc, $alpha: 0.5);
 $color-shadow: rgba($color: #1f1f1f, $alpha: 0.9);
 
@@ -25,7 +25,123 @@ $medium: 768px;
 $small: 550px;
 $extraSmall: 450px;
 
+$heading: 70px;
+$heading-sm: 50px;
+$h1: 35px;
+$h2: 30px;
+$h3: 25px;
+$h4: 20px;
+$font-base: 16px;
+$font-base-lg: 18px;
+
 
 .about{
-    min-height: 100vh;
+    padding: 0 $padding-margin-ex-lg;
+    .about-container{
+        padding: $padding-margin-lg 0;
+        h2{
+            font-size: $h2;
+            font-family: 'Roboto', sans-serif;
+            max-width: 70%;
+            letter-spacing: 1px;
+            color: $color-pri;
+            margin-bottom: 30px;
+            position: relative;
+            display: inline-block;
+            &::after{
+                content: '';
+                position: absolute;
+                width: 200px;
+                height: 1px;
+                right: -220px;
+                background-color: $color-border;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+
+        .about-content{
+            display: flex;
+            .text-content{
+                flex: 1;
+                p{
+                    font-size: $font-base;
+                    font-family: Arial, Helvetica, sans-serif;
+                    margin-bottom: 20px;
+                    line-height: 22px;
+                    letter-spacing: 0.3px;
+                    color: $color-pri-sec;
+                }
+                .spacial-tag{
+                    font-size: $font-base-lg;
+                    font-weight: bold;
+                    color: $color-pri;
+                }
+                .technology-list{
+                    max-width: 350px;
+                    display: flex;
+                    justify-content: space-between;
+                    li{
+                        list-style: none;
+                        margin-bottom: 5px;
+                        color: $color-pri-sec;
+                        span{
+                            color: $color-sec;
+                        }
+                    }
+                }
+            }
+            .img-container{
+                flex: 1;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 10px;
+                .image{
+                    position: relative;
+                    img{
+                        display: block;
+                        width: 100%;
+                        max-width: 300px;
+                        height: auto;
+                        border-radius: 10px;
+                    }
+                    &::after{
+                        content: '';
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        background-color: $color-sec-sec;
+                        left: 0;
+                        top: 0;
+                        border-radius: 10px;
+                        transition: $transition;
+                    }
+                    &::before{
+                        content: '';
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        left: 20px;
+                        top: 20px;
+                        border: 1px solid $color-sec;
+                        z-index: -1;
+                        border-radius: 10px;
+                        transition: $transition;
+                    }
+                    &:hover{
+                        &::after{
+                            background-color: transparent;
+                        }
+                        &::before{
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            opacity: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
