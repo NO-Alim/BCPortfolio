@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;600;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700;900&display=swap');
 
 $color-pri: #ffffff;
 $color-pri-sec: rgba($color: #e9e9e9, $alpha: 0.8);
 $color-bg:  rgba($color: #101c31, $alpha: 1.0);
 $color-bg-sec:  rgba($color: #101c31, $alpha: 0.8);
 $color-sec: rgba($color: #75efff, $alpha: 1.0);
-$color-sec-sec: rgba($color: #75efff, $alpha: 0.3);
+$color-sec-sec: rgba($color: #75efff, $alpha: 0.2);
 $color-border: rgba($color: #cccccc, $alpha: 0.5);
 $color-shadow: rgba($color: #1f1f1f, $alpha: 0.9);
 
@@ -25,7 +25,151 @@ $medium: 768px;
 $small: 550px;
 $extraSmall: 450px;
 
+$heading: 70px;
+$heading-sm: 50px;
+$h1: 35px;
+$h2: 30px;
+$h3: 25px;
+$h4: 20px;
+$font-base: 16px;
+$font-base-lg: 18px;
+
 
 .experience{
-    min-height: 100vh;
+    padding: 0 $padding-margin-ex-lg;
+    @media (max-width: $ex-medium) {
+        padding: 0 $padding-margin-lg;
+    }
+    @media (max-width: $medium) {
+        padding: 0 $padding-margin-sm;
+    }
+    .experience-container{
+        width: 80%;
+        margin: 0 auto;
+        padding: $padding-margin-lg 0;
+        @media (max-width: $medium) {
+            padding: $padding-margin-md 0;
+            width: 100%;
+        }
+        h2{
+            font-size: $h2;
+            font-family: 'Roboto', sans-serif;
+            max-width: 70%;
+            letter-spacing: 2px;
+            color: $color-pri;
+            margin-bottom: 30px;
+            position: relative;
+            display: inline-block;
+            @media (max-width: $medium) {
+                margin-bottom: $padding-margin-md;
+            }
+            @media (max-width: $small) {
+                font-size: $h4;
+            }
+            &::after{
+                content: '';
+                position: absolute;
+                width: 200px;
+                height: 1px;
+                right: -220px;
+                background-color: $color-border;
+                top: 50%;
+                transform: translateY(-50%);
+                @media (max-width: $small) {
+                    width: 50px;
+                    right: -70px;
+                }
+            }
+        }
+        .experience-content{
+            display: flex;
+            justify-content: space-between;
+            @media (max-width: $medium) {
+                flex-direction: column;
+            }
+            .tab-container{
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                @media (max-width: $medium) {
+                    flex-direction: row;
+                    margin-bottom: $padding-margin-sm;
+                }
+
+                button{
+                    background-color: transparent;
+                    color: $color-pri;
+                    font-size: $font-base;
+                    border: none;
+                    width: 150px;
+                    height: 40px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-left: 3px solid $color-sec-sec;
+                    transition: $transition;
+                    transition-delay: 50ms;
+                    @media (max-width: $medium) {
+                        border-left: 0;
+                        border-bottom: 3px solid $color-sec-sec;
+                        font-size: 15px;
+                        width: auto;
+                        padding: 0 10px;
+                    }
+                    &.active{
+                        border-color: $color-sec;
+                        background-color: $color-sec-sec;
+                    }
+                    &:hover{
+                        background-color: $color-sec-sec;
+                    }
+                }
+            }
+            .job-description{
+                padding-left: $padding-margin-ex-sm;
+                @media (max-width: $medium) {
+                    padding: 0;
+                }
+                flex: 3;
+                h3{
+                    font-size: $h3;
+                    font-family: 'Roboto', sans-serif;
+                    font-weight: 300;
+                    margin-bottom: 20px;
+                    letter-spacing: 2px;
+                }
+                h4{
+                    font-size: $font-base-lg;
+                    background-color: $color-sec-sec;
+                    display: inline-block;
+                    font-family: 'Roboto', sans-serif;
+                    font-weight: 300;
+                    padding: 5px 10px;
+                    margin-bottom: 20px;
+                    border-radius: 5px;
+                    letter-spacing: 2px;
+                }
+                .date{
+                    font-size: $font-base;
+                    font-family: 'Roboto', sans-serif;
+                    font-weight: lighter;
+                    color: $color-pri-sec;
+                    letter-spacing: 0.5px;
+                    margin-bottom: 20px;
+                }
+                .work{
+                    font-size: $font-base;
+                    font-family: 'Roboto', sans-serif;
+                    font-weight: 300;
+                    color: $color-pri;
+                    letter-spacing: 0.5px;
+                    margin-bottom: 20px;
+                    span{
+                        color: $color-sec;
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+    }
 }

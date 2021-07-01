@@ -1,6 +1,6 @@
 import React from 'react'
 import './Scss/About.scss'
-import {FaCaretRight} from 'react-icons/fa'
+import {FaHtml5,FaCss3,FaSass,FaJsSquare,FaReact,FaCaretRight} from 'react-icons/fa'
 
 const img = 'https://cdn.pixabay.com/photo/2015/04/13/12/07/business-720429__340.jpg'
 
@@ -17,14 +17,13 @@ const About = () => {
                         <p>Here are a few technologies I've been working with recently :</p>
                         <div className="technology-list">
                             <div className="left-tech">
-                                <li><span><FaCaretRight/></span> HTML5</li>
-                                <li><span><FaCaretRight/></span> CSS</li>
-                                <li><span><FaCaretRight/></span> Scss</li>
+                                <li><span><FaHtml5/></span> HTML5</li>
+                                <li><span><FaCss3/></span> CSS</li>
+                                <li><span><FaSass/></span> Scss</li>
                             </div>
                             <div className="right-tech">
-                                <li><span><FaCaretRight/></span> JavaScript (ES6+)</li>
-                                <li><span><FaCaretRight/></span> React js</li>
-                                <li><span><FaCaretRight/></span> Redux</li>
+                                <li><span><FaJsSquare/></span> JavaScript (ES6+)</li>
+                                <li><span><FaReact/></span> React js</li>
                                 <li><span><FaCaretRight/></span> Material-UI</li>
                             </div>
                         </div>

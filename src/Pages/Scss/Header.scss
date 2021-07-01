@@ -37,8 +37,17 @@ $font-base-lg: 18px;
 
 .header{
     padding: 0 $padding-margin-ex-lg;
+    @media (max-width: $ex-medium) {
+        padding: 0 $padding-margin-lg;
+    }
+    @media (max-width: $medium) {
+        padding: 0 $padding-margin-sm;
+    }
     .header-container{
         padding: $padding-margin-lg 0;
+        @media (max-width: $medium) {
+            padding: $padding-margin-md 0;
+        }
         .spacial-tag{
             font-family: 'Roboto Mono', monospace;
             color: $color-sec;
@@ -51,6 +60,10 @@ $font-base-lg: 18px;
             color: $color-pri;
             margin-bottom: 10px;
             font-weight: 900;
+            @media (max-width: $small) {
+                font-size: $h1;
+                letter-spacing: 2px;
+            }
         }
         h2{
             font-size: $h2;
@@ -60,6 +73,12 @@ $font-base-lg: 18px;
             color: $color-pri-sec;
             font-weight: lighter;
             margin-bottom: 30px;
+            @media (max-width: $ex-medium) {
+                max-width: 100%;
+            }
+            @media (max-width: $small) {
+                font-size: $h4;
+            }
         }
 
         button{
@@ -97,6 +116,9 @@ $font-base-lg: 18px;
                     top: 0;
                     left: 0;
                 }
+            }
+            &:focus{
+                outline: none;
             }
         }
     }

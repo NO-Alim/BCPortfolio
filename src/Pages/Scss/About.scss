@@ -37,17 +37,29 @@ $font-base-lg: 18px;
 
 .about{
     padding: 0 $padding-margin-ex-lg;
+    @media (max-width: $ex-medium) {
+        padding: 0 $padding-margin-lg;
+    }
+    @media (max-width: $medium) {
+        padding: 0 $padding-margin-sm;
+    }
     .about-container{
         padding: $padding-margin-lg 0;
+        @media (max-width: $medium) {
+            padding: $padding-margin-md 0;
+        }
         h2{
             font-size: $h2;
             font-family: 'Roboto', sans-serif;
             max-width: 70%;
-            letter-spacing: 1px;
+            letter-spacing: 2px;
             color: $color-pri;
             margin-bottom: 30px;
             position: relative;
             display: inline-block;
+            @media (max-width: $small) {
+                font-size: $h4;
+            }
             &::after{
                 content: '';
                 position: absolute;
@@ -57,13 +69,23 @@ $font-base-lg: 18px;
                 background-color: $color-border;
                 top: 50%;
                 transform: translateY(-50%);
+                @media (max-width: $small) {
+                    width: 50px;
+                    right: -70px;
+                }
             }
         }
 
         .about-content{
             display: flex;
+            @media (max-width: $medium) {
+                flex-direction: column;
+            }
             .text-content{
                 flex: 1;
+                @media (max-width: $medium) {
+                    order: 2;
+                }
                 p{
                     font-size: $font-base;
                     font-family: Arial, Helvetica, sans-serif;
@@ -71,22 +93,34 @@ $font-base-lg: 18px;
                     line-height: 22px;
                     letter-spacing: 0.3px;
                     color: $color-pri-sec;
+                    
                 }
                 .spacial-tag{
                     font-size: $font-base-lg;
                     font-weight: bold;
                     color: $color-pri;
+                    @media (max-width: $small) {
+                        font-size: $font-base;
+                        font-weight: 300;
+                    }
                 }
                 .technology-list{
                     max-width: 350px;
                     display: flex;
                     justify-content: space-between;
+                    @media (max-width: $small) {
+                        max-width: 100%;
+                    }
+                    @media (max-width: 322px) {
+                        flex-direction: column;
+                    }
                     li{
                         list-style: none;
                         margin-bottom: 5px;
                         color: $color-pri-sec;
                         span{
                             color: $color-sec;
+                            margin-right: 5px;
                         }
                     }
                 }
@@ -94,9 +128,14 @@ $font-base-lg: 18px;
             .img-container{
                 flex: 1;
                 display: flex;
-                align-items: center;
+                align-items: flex-start;
                 justify-content: center;
                 border-radius: 10px;
+                @media (max-width: $medium) {
+                    order: 1;
+                    margin-bottom: $padding-margin-sm;
+                    justify-content: flex-start;
+                }
                 .image{
                     position: relative;
                     img{
@@ -105,6 +144,9 @@ $font-base-lg: 18px;
                         max-width: 300px;
                         height: auto;
                         border-radius: 10px;
+                        @media (max-width: $medium) {
+                            max-width: 250px;
+                        }
                     }
                     &::after{
                         content: '';
@@ -134,9 +176,8 @@ $font-base-lg: 18px;
                             background-color: transparent;
                         }
                         &::before{
-                            top: 50%;
-                            left: 50%;
-                            transform: translate(-50%, -50%);
+                            top: 0;
+                            left: 0;
                             opacity: 0;
                         }
                     }
