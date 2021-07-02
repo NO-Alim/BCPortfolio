@@ -5,6 +5,7 @@ import Navbar from "./Component/Navbar";
 import Error from './Pages/Error'
 import TopBtn from './Component/TopBtn'
 import Email from './Component/Email'
+import Social from './Component/Social';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
       </Switch>
       <Footer />
       <TopBtn />
+      <Social />
       <Email />
     </Router>
     </div>

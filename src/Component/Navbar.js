@@ -110,6 +110,26 @@ const Navbar = () => {
                     <div className="drawer-btn-container">
                         <button onClick={() => setDrawerOpen(false)} className="close-btn">close</button>
                     </div>
+                    <ul>
+                            <li>
+                                <ScrollLink to="header" spy={true} smooth={true} offset={-100} duration={500}>Home</ScrollLink>
+                            </li>
+                            <li>
+                                <ScrollLink to="about" spy={true} smooth={true} offset={-100} duration={500}>About</ScrollLink>
+                            </li>
+                            <li>
+                                <ScrollLink to="experience" spy={true} smooth={true} offset={-100} duration={500}>experience</ScrollLink>
+                            </li>
+                            <li>
+                                <ScrollLink to="work" spy={true} smooth={true} offset={-100} duration={500}>work</ScrollLink>
+                            </li>
+                            <li>
+                                <ScrollLink to="contact" spy={true} smooth={true} offset={-100} duration={500}>contact</ScrollLink>
+                            </li>
+                            <li>
+                                <button>Resume</button>
+                            </li>
+                        </ul>
                 </div>
         </Drawer>
         </>

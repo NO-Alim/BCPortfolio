@@ -1,14 +1,13 @@
 import React from 'react'
-import './Scss/Footer.scss'
+import './Scss/Social.scss'
 import {Link} from 'react-router-dom'
 import {FaFacebookF,FaLinkedinIn,FaTwitter,FaGithub} from 'react-icons/fa'
 
-const Footer = () => {
+const Social = () => {
     return (
-        <footer>
-            <div className="footer-container">
-                <div className="footer-social">
-                    <ul>
+        <div className="fixed-social">
+            <div className="social-container">
+                <ul>
                     <li>
                         <Link to="#"><FaFacebookF /></Link>
                     </li>
@@ -21,12 +20,10 @@ const Footer = () => {
                     <li>
                         <Link to="#"><FaGithub /></Link>
                     </li>
-                    </ul>
-                </div>
-                <p>Designed & Build by Abdul Alim</p>
+                </ul>
             </div>
-        </footer>
+        </div>
     )
 }
 
-export default Footer
+export default Social

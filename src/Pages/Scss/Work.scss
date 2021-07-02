@@ -81,10 +81,21 @@ $font-base-lg: 18px;
             justify-content: space-between;
             width: 100%;
             margin-top: $padding-margin-sm;
+            @media (max-width: $medium) {
+                flex-direction: column;
+            }
             .project{
                 display: flex;
                 flex-direction: column;
                 width: 100%;
+                @media (max-width: $medium) {
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: center;
+                }
+                @media (max-width: 450px) {
+                    flex-direction: column;
+                }
                 .img-container{
                     display: block;
                     min-width: 100%;
@@ -92,12 +103,29 @@ $font-base-lg: 18px;
                     display: flex;
                     align-items: center;
                     justify-content: center;
+                    @media (max-width: $medium) {
+                        min-width: 33.33%;
+                        max-width: 33.33%;       
+                    }
+                    @media (max-width: $small) {
+                        min-width: 50%;
+                        max-width: 50%;       
+                    }
+
+                    @media (max-width: 450px) {
+                        min-width: 100%;
+                        max-width: 100%;
+                    }
                     .img{
                         width: 90%;
                         height: 100px;
                         margin: 10px 0;
                         cursor: pointer;
                         overflow: hidden;
+                        border-radius: 10px;
+                        @media (max-width: 450px) {
+                            height: 150px;
+                        }
                         img{
                             display: block;
                             width: 100%;
@@ -109,6 +137,31 @@ $font-base-lg: 18px;
                             }
                         }
                     }
+                }
+            }
+            .project-cont-one{
+                @media (max-width: $medium) {
+                    //display: none;
+                }
+            }
+            .project-cont-two{
+                @media (max-width: $small) {
+                    display: none;
+                }
+            }
+            .project-cont-three{
+                @media (max-width: $small) {
+                    display: none;
+                }
+            }
+            .project-cont-four{
+                @media (max-width: $medium) {
+                    //display: none;
+                }
+            }
+            .project-cont-five{
+                @media (max-width: $medium) {
+                    //display: none;
                 }
             }
         }
