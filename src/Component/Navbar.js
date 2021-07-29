@@ -7,6 +7,7 @@ import Drawer from '@material-ui/core/Drawer';
 import { makeStyles } from '@material-ui/core/styles';
 import {Link as ScrollLink} from 'react-scroll'
 import {useWindowWidth} from '@react-hook/window-size'
+import Resume from '../img/Resume.doc'
 
 
 const useStyles = makeStyles({
@@ -116,7 +117,7 @@ const Navbar = () => {
                                 <ScrollLink to="contact" spy={true} smooth={true} offset={-100} duration={500}>contact</ScrollLink>
                             </li>
                             <li>
-                                <button>Resume</button>
+                                <a className="resume-btn" href={Resume} download='Resume.doc'>Resume</a>
                             </li>
                         </ul>
                     </div>
@@ -159,7 +160,7 @@ const Navbar = () => {
                                 <ScrollLink to="contact" spy={true} smooth={true} offset={-100} duration={500} onClick={() => setDrawerOpen(false)}>contact</ScrollLink>
                             </li>
                             <li>
-                                <button className="resume-btn">Resume</button>
+                                <a className="resume-btn" href={Resume} download="Resume.doc">Resume</a>
                             </li>
                         </ul>
                 </div>
