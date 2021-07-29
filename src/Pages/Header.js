@@ -8,7 +8,7 @@ const Header = () => {
                 <h1>Abdul Alim.</h1>
                 <h2>I Help Designers, Small Agencies And Businesses Bring Their Ideas To Life.</h2>
                 <p className="description"></p>
-                <button>Let's Talk</button>
+                <a className="mail-btn" href="mailto:no-reply@example.com">Let's Talk</a>
             </div>
         </div>
     )

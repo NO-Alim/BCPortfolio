@@ -1,11 +1,12 @@
 import React,{useEffect, useRef, useState} from 'react'
 import './Scss/Navbar.scss'
 import {NavLink, Link} from 'react-router-dom'
-import {FaMagento} from 'react-icons/fa'
+import {FaMagento,FaTimes} from 'react-icons/fa'
 import Headroom from 'react-headroom'
 import Drawer from '@material-ui/core/Drawer';
 import { makeStyles } from '@material-ui/core/styles';
 import {Link as ScrollLink} from 'react-scroll'
+import {useWindowWidth} from '@react-hook/window-size'
 
 
 const useStyles = makeStyles({
@@ -13,13 +14,13 @@ const useStyles = makeStyles({
         display: 'flex',
       },
     list: {
-        width: 250,
+        width: 'auto',
       },
       fullList: {
         width: 'auto',
       },
       drawerPaper : {
-          width: 250,
+          width: 'auto',
           background: "#0b162a",
           color: "#e9e9e9"
       }
@@ -29,9 +30,10 @@ const Navbar = () => {
     const [shadow, SetShadow] = useState(false);
     //drawer
     const [drawerOpen, setDrawerOpen] = useState(false);
-    
-    
+    const menuBtnRef = useRef(null);
+    const menuRef = useRef(null);
     const navRef = useRef(null);
+    const width = useWindowWidth();
 
 
     const toggleDrawer = () =>{
@@ -52,12 +54,36 @@ const Navbar = () => {
             SetShadow(true)
         }
     }
+
+    const handleClick = (e) =>{
+        if (!menuBtnRef.current.contains(e.target)) {
+            if (!menuRef.current.contains(e.target)) {
+                setDrawerOpen(false);
+            }
+        }
+
+    }
+
+    const mediaWidth = () => {
+        if (width > 768) {
+            setDrawerOpen(false)
+        }
+    }
+
+    useEffect(() => {
+        mediaWidth();
+        return () => {
+            mediaWidth();
+        }
+    },[width])
     useEffect(() => {
         window.addEventListener("scroll",scrollHandler, true);
-        document.addEventListener("keydown", toggleDrawerOutClick)
+        document.addEventListener("keydown", toggleDrawerOutClick);
+        document.addEventListener('click', handleClick)
         return () =>{
             window.removeEventListener("scroll",scrollHandler,true)
             document.removeEventListener("keydown", toggleDrawerOutClick)
+            document.removeEventListener('click', handleClick)
 
         }
     })
@@ -94,8 +120,14 @@ const Navbar = () => {
                             </li>
                         </ul>
                     </div>
-                    <div className="menu-container">
-                        <span onClick={() => toggleDrawer()}><FaMagento/></span>
+                    <div className="menu">
+                        <div className="menu-container" ref={menuBtnRef}>
+                            <div className={`menus ${drawerOpen ? 'active': null}`} onClick={() => toggleDrawer()}>
+                                <div className="menu-bar"></div>
+                                <div className="menu-bar"></div>
+                                <div className="menu-bar"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </nav>
@@ -106,28 +138,28 @@ const Navbar = () => {
             open={drawerOpen}
             anchor="left"
             classes={{paper: classes.drawerPaper}}>
-                <div className="drawer-container">
+                <div className="drawer-container" ref={menuRef}>
                     <div className="drawer-btn-container">
-                        <button onClick={() => setDrawerOpen(false)} className="close-btn">close</button>
+                        <button onClick={() => setDrawerOpen(false)} className="close-btn"><FaTimes /></button>
                     </div>
                     <ul>
                             <li>
-                                <ScrollLink to="header" spy={true} smooth={true} offset={-100} duration={500}>Home</ScrollLink>
+                                <ScrollLink to="header" spy={true} smooth={true} offset={-100} duration={500} onClick={() => setDrawerOpen(false)}>Home</ScrollLink>
                             </li>
                             <li>
-                                <ScrollLink to="about" spy={true} smooth={true} offset={-100} duration={500}>About</ScrollLink>
+                                <ScrollLink to="about" spy={true} smooth={true} offset={-100} duration={500} onClick={() => setDrawerOpen(false)}>About</ScrollLink>
                             </li>
                             <li>
-                                <ScrollLink to="experience" spy={true} smooth={true} offset={-100} duration={500}>experience</ScrollLink>
+                                <ScrollLink to="experience" spy={true} smooth={true} offset={-100} duration={500} onClick={() => setDrawerOpen(false)}>experience</ScrollLink>
                             </li>
                             <li>
-                                <ScrollLink to="work" spy={true} smooth={true} offset={-100} duration={500}>work</ScrollLink>
+                                <ScrollLink to="work" spy={true} smooth={true} offset={-100} duration={500} onClick={() => setDrawerOpen(false)}>work</ScrollLink>
                             </li>
                             <li>
-                                <ScrollLink to="contact" spy={true} smooth={true} offset={-100} duration={500}>contact</ScrollLink>
+                                <ScrollLink to="contact" spy={true} smooth={true} offset={-100} duration={500} onClick={() => setDrawerOpen(false)}>contact</ScrollLink>
                             </li>
                             <li>
-                                <button>Resume</button>
+                                <button className="resume-btn">Resume</button>
                             </li>
                         </ul>
                 </div>

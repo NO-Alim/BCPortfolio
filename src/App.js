@@ -6,9 +6,31 @@ import Error from './Pages/Error'
 import TopBtn from './Component/TopBtn'
 import Email from './Component/Email'
 import Social from './Component/Social';
+import { useEffect, useState } from 'react';
+import Fade from 'react-reveal/Fade';
 
 function App() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() =>{
+    setTimeout(() => {
+      setIsLoading(false)
+    }, 2000);
+  })
+  if (isLoading) {
+    return(
+      <div className="loader-container">
+        <div className="loader">
+          <div className="circle"></div>
+          <div className="circle"></div>
+          <div className="circle"></div>
+          <div className="circle"></div>
+        </div>
+      </div>
+    )
+  }
   return (
+    <Fade>
     <div className="App">
       <Router>
       <Navbar />
@@ -26,6 +48,7 @@ function App() {
       <Email />
     </Router>
     </div>
+    </Fade>
   );
 }
 

@@ -48,7 +48,7 @@ const Experience = () => {
                         <h3>{responsibility}</h3>
                         <h4>{marketplace}</h4>
                         <p className="date">{dates}</p>
-                        <p className="work"><span><FaAngleDoubleRight /> </span>{work}</p>
+                        <p className="exp-work"><span><FaAngleDoubleRight /> </span>{work}</p>
                     </article>
                 </div>
             </div>
