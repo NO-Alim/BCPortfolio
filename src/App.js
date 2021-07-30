@@ -8,6 +8,7 @@ import Email from './Component/Email'
 import Social from './Component/Social';
 import { useEffect, useState } from 'react';
 import Fade from 'react-reveal/Fade';
+import Chat from './Component/Chat';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -44,6 +45,7 @@ function App() {
       </Switch>
       <Footer />
       <TopBtn />
+      <Chat />
       <Social />
       <Email />
     </Router>

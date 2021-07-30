@@ -58,6 +58,10 @@ const Work = () => {
                         <div className="img-container">
                             <div className="img">
                                 <img src={img} alt="img"/>
+                                <div className="link-container">
+                                    <a target='_blink' href='https://journalistportfolio.netlify.app'><FaGithub /></a>
+                                    <a target='_blink' href='https://journalistportfolio.netlify.app'><FaExternalLinkAlt /></a>
+                                </div>
                                 </div> 
                         </div>
                     </div>
@@ -65,42 +69,74 @@ const Work = () => {
                         <div className="img-container">
                             <div className="img">
                                 <img src={img2} alt="img"/>
-                                </div> 
+                                <div className="link-container">
+                                    <a target='_blink' href='https://journalistportfolio.netlify.app'><FaGithub /></a>
+                                    <a target='_blink' href='https://journalistportfolio.netlify.app'><FaExternalLinkAlt /></a>
+                                </div>
+                            </div> 
                         </div>
                         <div className="img-container">
                             <div className="img">
                                 <img src={img3} alt="img"/>
-                                </div> 
+                                <div className="link-container">
+                                    <a target='_blink' href='https://journalistportfolio.netlify.app'><FaGithub /></a>
+                                    <a target='_blink' href='https://journalistportfolio.netlify.app'><FaExternalLinkAlt /></a>
+                                </div>
+                            </div> 
                         </div>
                     </div>
                     <div className="project-cont-three project">
-                        <div className="img-container"><div className="img">
+                        <div className="img-container"><dv className="img">
                             <img src={img} alt="img"/>
-                            </div> </div>
-                        <div className="img-container"><div className="img">
+                            <div className="link-container">
+                                    <a target='_blink' href='https://journalistportfolio.netlify.app'><FaGithub /></a>
+                                    <a target='_blink' href='https://journalistportfolio.netlify.app'><FaExternalLinkAlt /></a>
+                                </div>
+                            </dv> </div>
+                        <div className="img-container"><dv className="img">
                             <img src={img2} alt="img"/>
-                            </div> </div>
-                        <div className="img-container"><div className="img">
+                            <div className="link-container">
+                                    <a target='_blink' href='https://journalistportfolio.netlify.app'><FaGithub /></a>
+                                    <a target='_blink' href='https://journalistportfolio.netlify.app'><FaExternalLinkAlt /></a>
+                                </div>
+                            </dv> </div>
+                        <div className="img-container"><dv className="img">
                             <img src={img3} alt="img"/>
-                            </div> </div>
+                            <div className="link-container">
+                                    <a target='_blink' href='https://journalistportfolio.netlify.app'><FaGithub /></a>
+                                    <a target='_blink' href='https://journalistportfolio.netlify.app'><FaExternalLinkAlt /></a>
+                                </div>
+                            </dv> </div>
                     </div>
                     <div className="project-cont-four project">
                         <div className="img-container">
                             <div className="img">
                                 <img src={img2} alt="img"/>
-                                </div> 
+                                <div className="link-container">
+                                    <a target='_blink' href='https://journalistportfolio.netlify.app'><FaGithub /></a>
+                                    <a target='_blink' href='https://journalistportfolio.netlify.app'><FaExternalLinkAlt /></a>
+                                </div>
+                            </div> 
                         </div>
                         <div className="img-container">
                             <div className="img">
                                 <img src={img3} alt="img"/>
-                                </div> 
+                                <div className="link-container">
+                                    <a target='_blink' href='https://journalistportfolio.netlify.app'><FaGithub /></a>
+                                    <a target='_blink' href='https://journalistportfolio.netlify.app'><FaExternalLinkAlt /></a>
+                                </div>
+                            </div> 
                         </div>
                     </div>
                     <div className="project-cont-five project">
                         <div className="img-container">
                             <div className="img">
                                 <img src={img} alt="img"/>
-                                </div> 
+                                <div className="link-container">
+                                    <a target='_blink' href='https://journalistportfolio.netlify.app'><FaGithub /></a>
+                                    <a target='_blink' href='https://journalistportfolio.netlify.app'><FaExternalLinkAlt /></a>
+                                </div>
+                            </div> 
                         </div>
                     </div>
                 </div>
