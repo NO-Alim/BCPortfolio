@@ -24,7 +24,7 @@ const Chat = () => {
 
     return (
         <div className="chat-btn" ref={chatRef}>
-            <a className="button" href="mailto:no-reply@example.com">Chat</a>
+            <a className="button" href="mailto:abdulalimrakib53@gmail.com">Chat</a>
         </div>
     )
 }
