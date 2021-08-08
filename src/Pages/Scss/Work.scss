@@ -89,6 +89,9 @@ $font-base-lg: 18px;
                     letter-spacing: 2px;
                     margin-bottom: 20px;
                     font-family: 'Roboto', sans-serif;
+                    @media (max-width: $small) {
+                        font-size: 20px;
+                    }
                 }
 
                 .img-container{
@@ -218,6 +221,9 @@ $font-base-lg: 18px;
             letter-spacing: 2px;
             margin-bottom: 20px;
             font-family: 'Roboto', sans-serif;
+            @media (max-width: $small) {
+                font-size: 20px;
+            }
         }
         .projects-container{
             display: flex;
@@ -298,12 +304,17 @@ $font-base-lg: 18px;
                             transform: scale(0);
                             border-radius: 10px;
                             @media (max-width: 450px) {
+                                background-color: rgba($color-bg, $alpha: 0.4);
                                 transform: scale(1);
                             }
                             a{
                                 margin: 0 10px;
                                 transform: scale(1);
                                 transition: $transition;
+                                @media (max-width: 450px) {
+                                    color: $color-sec;
+                                    font-size: $h3;
+                                }
                                 &:hover{
                                     transform: scale(1.2);
                                     color: $color-sec;

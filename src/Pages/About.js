@@ -1,8 +1,7 @@
 import React from 'react'
 import './Scss/About.scss'
 import {FaHtml5,FaCss3,FaSass,FaJsSquare,FaReact,FaCaretRight} from 'react-icons/fa'
-
-const img = 'https://cdn.pixabay.com/photo/2015/04/13/12/07/business-720429__340.jpg'
+import img from '../img/alim.jpg'
 
 const About = () => {
     return (

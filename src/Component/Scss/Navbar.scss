@@ -55,10 +55,10 @@ nav{
             a{
                 display: inline-block;
                 cursor: pointer;
-                &.active{
-                    color: $color-sec;
-                    h2{
-                        color: $color-sec;
+                img{
+                    max-width: 70px;
+                    @media (max-width: $small) {
+                        max-width: 50px;
                     }
                 }
             }

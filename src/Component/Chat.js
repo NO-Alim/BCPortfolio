@@ -9,7 +9,7 @@ const Chat = () => {
         const pageOffset = window.pageYOffset * 2;
         const ViewPortHeight = window.innerHeight;
         if (pageOffset > ViewPortHeight) {
-            chatRef.current.style.bottom = '20px' 
+            chatRef.current.style.bottom = '70px' 
         } else {
             chatRef.current.style.bottom = '-40px' 
         }

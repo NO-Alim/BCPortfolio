@@ -8,6 +8,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import {Link as ScrollLink} from 'react-scroll'
 import {useWindowWidth} from '@react-hook/window-size'
 import Resume from '../img/Resume.doc'
+import logo from '../img/logo.png'
 
 
 const useStyles = makeStyles({
@@ -96,7 +97,8 @@ const Navbar = () => {
                 <div className="nav-container">
                     <div className="logo-container">
                         <ScrollLink to="header" spy={true} smooth={true} offset={-100} duration={500}>
-                            <h2>BC</h2>
+                            {/* <h2>AA</h2> */}
+                            <img src={logo} alt='logo' className="logo"/>
                         </ScrollLink>
                     </div>
                     <div className="link-container">
