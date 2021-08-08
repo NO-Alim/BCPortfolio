@@ -7,6 +7,7 @@ import foodCommerce from '../img/foodcommerce.png';
 import prettygal from '../img/pretty-gal.png';
 import fitness from '../img/fitness.png'
 import journalist from '../img/jurnalist.png'
+import FoodBlog from '../img/Food-Blog.png'
 const img = 'https://cdn.pixabay.com/photo/2017/07/12/08/35/network-2496193__340.jpg'
 const img2 = 'https://cdn.pixabay.com/photo/2021/05/19/06/13/smartphone-6265046__340.jpg'
 const img3 = 'https://cdn.pixabay.com/photo/2017/09/05/10/08/office-2717014__340.jpg'
@@ -133,10 +134,10 @@ const Work = () => {
                     <div className="project-cont-five project">
                         <div className="img-container">
                             <div className="img">
-                                <img src={img} alt="img"/>
+                                <img src={FoodBlog} alt="img"/>
                                 <div className="link-container">
-                                    <a target='_blink' href='https://journalistportfolio.netlify.app'><FaGithub /></a>
-                                    <a target='_blink' href='https://journalistportfolio.netlify.app'><FaExternalLinkAlt /></a>
+                                    <a target='_blink' href='https://github.com/NO-Alim/react-pro-one.git'><FaGithub /></a>
+                                    <a target='_blink' href='https://food-bloger.netlify.app/'><FaExternalLinkAlt /></a>
                                 </div>
                             </div> 
                         </div>
