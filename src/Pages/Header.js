@@ -13,7 +13,7 @@ const Header = () => {
                 <a className="mail-btn" href="mailto:abdulalimrakib53@gmail.com">Let's Talk</a>
             </div>
             <div className="btn-down">
-                <ScrollLink to="about" spy={true} smooth={true} offset={-100} duration={500} className="down-btn"><img src={arrow} /></ScrollLink>
+                <ScrollLink to="about" spy={true} smooth={true} offset={80} duration={500} className="down-btn"><img src={arrow} /></ScrollLink>
             </div>
         </div>
     )

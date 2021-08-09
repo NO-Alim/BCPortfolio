@@ -9,6 +9,7 @@ import Social from './Component/Social';
 import { useEffect, useState } from 'react';
 import Fade from 'react-reveal/Fade';
 import Chat from './Component/Chat';
+import SideScroller from './Component/SideScroller';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -47,6 +48,7 @@ function App() {
       <TopBtn />
       <Chat />
       <Social />
+      <SideScroller />
       <Email />
     </Router>
     </div>
