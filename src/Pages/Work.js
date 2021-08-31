@@ -25,11 +25,11 @@ const Work = () => {
                         <div className="img-container">
                             <img src={kallas} />
                             <div className="project-content">
-                                <p>This is a e-commerce site i develope. I create this site use react.js and also fetch data from <a href="https://www.thecocktaildb.com/">www.thecocktaildb.com</a>. In this site special feature is search product, add and deleting from cart, from validation etc.</p>
+                                <p>This is a e-commerce site i develope. I create this site use react.js and also fetch data from <a href="https://fakestoreapi.com/products">www.fakestoreapi.com</a>. In this site special feature is search product, add and deleting from cart, from validation etc.</p>
                                 <div className="tools">
                                     <span>React.js</span>
                                     <span>scss</span>
-                                    <span>TheCocktailDB API</span>
+                                    <span>fakestoreapi API</span>
                                 </div>
                                 <div className="links">
                                     <a target='_blink' href='https://github.com/NO-Alim/Kalle_s.git'><FaGithub /></a>
