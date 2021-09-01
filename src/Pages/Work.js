@@ -33,7 +33,7 @@ const Work = () => {
                                 </div>
                                 <div className="links">
                                     <a target='_blink' href='https://github.com/NO-Alim/Kalle_s.git'><FaGithub /></a>
-                                    <a target='_blink' href='https://awesome-curie-7b522f.netlify.app/'><FaExternalLinkAlt /></a>
+                                    <a target='_blink' href='https://pedantic-brattain-c0af01.netlify.app/'><FaExternalLinkAlt /></a>
                                 </div>
                             </div>
                         </div>
