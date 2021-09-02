@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/BCPortfolio/static/css/main.81fe965f.chunk.css",
+    "main.js": "/BCPortfolio/static/js/main.68e8ab45.chunk.js",
+    "main.js.map": "/BCPortfolio/static/js/main.68e8ab45.chunk.js.map",
+    "runtime-main.js": "/BCPortfolio/static/js/runtime-main.3d128645.js",
+    "runtime-main.js.map": "/BCPortfolio/static/js/runtime-main.3d128645.js.map",
+    "static/js/2.5e480ca9.chunk.js": "/BCPortfolio/static/js/2.5e480ca9.chunk.js",
+    "static/js/2.5e480ca9.chunk.js.map": "/BCPortfolio/static/js/2.5e480ca9.chunk.js.map",
+    "index.html": "/BCPortfolio/index.html",
+    "static/css/main.81fe965f.chunk.css.map": "/BCPortfolio/static/css/main.81fe965f.chunk.css.map",
+    "static/js/2.5e480ca9.chunk.js.LICENSE.txt": "/BCPortfolio/static/js/2.5e480ca9.chunk.js.LICENSE.txt",
+    "static/media/Food-Blog.c49804b9.png": "/BCPortfolio/static/media/Food-Blog.c49804b9.png",
+    "static/media/Resume.49bacfbc.doc": "/BCPortfolio/static/media/Resume.49bacfbc.doc",
+    "static/media/alim.59d686bc.jpg": "/BCPortfolio/static/media/alim.59d686bc.jpg",
+    "static/media/fitness.aecc87b1.png": "/BCPortfolio/static/media/fitness.aecc87b1.png",
+    "static/media/foodcommerce.81b07c28.png": "/BCPortfolio/static/media/foodcommerce.81b07c28.png",
+    "static/media/jurnalist.b7bf029a.png": "/BCPortfolio/static/media/jurnalist.b7bf029a.png",
+    "static/media/kallas.08869028.png": "/BCPortfolio/static/media/kallas.08869028.png",
+    "static/media/logo.91242d60.png": "/BCPortfolio/static/media/logo.91242d60.png",
+    "static/media/pretty-gal.a24255d9.png": "/BCPortfolio/static/media/pretty-gal.a24255d9.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.3d128645.js",
+    "static/js/2.5e480ca9.chunk.js",
+    "static/css/main.81fe965f.chunk.css",
+    "static/js/main.68e8ab45.chunk.js"
+  ]
+}
